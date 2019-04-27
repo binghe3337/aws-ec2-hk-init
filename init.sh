@@ -63,7 +63,9 @@ cat <<EOF >/etc/rc.local
 exit 0
 EOF
 chmod +x /etc/rc.local
+sleep 3
 systemctl start rc-local
+sleep 1
 systemctl status rc-local | grep -i active
 echo "Success"
 }
