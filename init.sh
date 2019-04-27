@@ -84,11 +84,8 @@ chmod +x /root/setup_sv.sh
 /root/setup_sv.sh
 rm -rf /root/setup_sv.sh
 
-
-
-
 mkdir -p /root/custom_scripts/liuliang
-wget --no-check-certificate -O /root/custom_scripts/liuliang/liuliang.py https://下载地址
+wget --no-check-certificate -O /root/custom_scripts/liuliang/liuliang.py https://raw.githubusercontent.com/binghe3337/aws-ec2-hk-init/master/liuliang.py
 echo '[program:liuliang]' > /etc/supervisor/relative/directory/liuliang.ini
 echo 'command=/usr/bin/python /root/custom_scripts/liuliang/liuliang.py' >> /etc/supervisor/relative/directory/liuliang.ini
 echo 'startsecs=1' >> /etc/supervisor/relative/directory/liuliang.ini
