@@ -45,6 +45,7 @@ apt-get -y install ethtool
 Enable_Rc_Local()
 {
 systemctl stop rc-local
+sleep 3
 rm -rf /etc/rc.local
 cat <<EOF >/etc/rc.local
 #!/bin/sh -e
