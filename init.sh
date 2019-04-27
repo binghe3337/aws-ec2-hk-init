@@ -9,6 +9,9 @@ if [ ! -f "/etc/debian_version" ]; then
     exit 1
 fi
 
+dpkg-reconfigure tzdata
+dpkg-reconfigure locales
+
 rm -rf /etc/apt/sources.list
 cat <<EOF >/etc/apt/sources.list
 deb http://cdn-aws.deb.debian.org/debian stretch main
