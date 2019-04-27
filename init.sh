@@ -103,3 +103,6 @@ echo ';redirect_stderr=true' >> /etc/supervisor/relative/directory/liuliang.ini
 echo ';stdout_logfile=/var/log/theprogramname.log' >> /etc/supervisor/relative/directory/liuliang.ini
 service supervisord restart
 
+systemctl restart rc-local
+sleep 3
+systemctl status rc-local
